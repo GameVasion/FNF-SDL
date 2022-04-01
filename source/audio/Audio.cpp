@@ -40,8 +40,7 @@ namespace Audio
 
     void Audio::playMusic(bool loop)
     {
-        if(music != nullptr)
-            Mix_PlayMusic(music, loop ? -1 : 0);
+        Mix_PlayMusic(music, loop ? -1 : 0);
     }
 
     int Audio::getMusicPosition()

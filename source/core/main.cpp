@@ -4,10 +4,11 @@
 #include "states/TitleState.hpp"
 #include "states/MainMenuState.hpp"
 #include "states/PlayState.hpp"
+#include "states/week1.hpp"
 #define SDL_MAIN_HANDLED
 
 Engine::launchOptions launch = {
-    "dog water",
+    "Friday Night Funkin' SDL2",
     1280,
     720
 };

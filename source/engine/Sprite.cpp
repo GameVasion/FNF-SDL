@@ -8,8 +8,8 @@ namespace Engine
         type = Type::SPRITE;
         animated = false;
         frame = (Frame*)malloc(sizeof(Frame));
-        w = 10;
-        h = 10;
+        w = 1;
+        h = 1;
         _pos = {10, 10, 10, 10};
     }
 

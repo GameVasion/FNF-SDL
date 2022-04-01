@@ -32,6 +32,19 @@ namespace Engine
         for(auto& object : objects){
             object->update();
         }
+
+        if(keysJustPressed[SDLK_w]){
+            std::cout << "Up";
+        }
+        if(keysJustPressed[SDLK_a]){
+            std::cout << "Left";
+        }
+        if(keysJustPressed[SDLK_s]){
+            std::cout << "Down";
+        }
+        if(keysJustPressed[SDLK_d]){
+            std::cout << "Right";
+        }
     }
     void State::add(Engine::Basic* object){
         objects.push_back(object);

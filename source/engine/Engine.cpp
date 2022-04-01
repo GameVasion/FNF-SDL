@@ -12,7 +12,7 @@ namespace Engine
         // switcharoo1.a = 255;
         // switcharoo2.a = 0;
         while(transY != 720){
-            transY += 1;
+            transY += 2;
             std::this_thread::sleep_for(std::chrono::milliseconds(1));
         }
         shouldUpdate = false;
@@ -27,18 +27,21 @@ namespace Engine
         transY = -720;
         while(transY != 720)
         {
-            transY += 1;
+            transY += 2;
             std::this_thread::sleep_for(std::chrono::milliseconds(1));
         }
         switcharoo = false;
         shouldUpdate = true;
     }
 
-    void switchState(State* state)
-    {  
-        std::thread sT(_switchState, state);
-        sT.detach();
+    void switchState(State* state) // Temporary until I fix
+    {
+        if(curState != nullptr)
+            delete curState;
+        curState = state;
+        curState->create();
     }
+
 
     void drawHorizontalGradientBox(SDL_Renderer * renderer,
             const int x, const int y, const int w, const int h, const float steps,

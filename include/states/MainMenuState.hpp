@@ -7,6 +7,7 @@
 #include "engine/Containers.hpp"
 #include "engine/Text.hpp"
 #include "states/PlayState.hpp"
+#include "states/week1.hpp"
 #include "engine/Engine.hpp"
 
 namespace States

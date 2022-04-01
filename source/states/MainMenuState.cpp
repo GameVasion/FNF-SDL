@@ -1,13 +1,15 @@
 #include "states/MainMenuState.hpp"
+#include <stdio.h>
 
 namespace States
 {
     const char* options[4] = {"story mode", "freeplay", "donate", "options"};
     void MainMenuState::create()
     {
-        Engine::Sprite* bg = new Engine::Sprite(getImage("menuBG"));
+        Engine::Sprite* bg = new Engine::Sprite(getImage("stages/stageback"));
         bg->x = -80;
-        bg->w = (int)(bg->w * 1.1f);
+        bg->w = (int)(bg->w * 0.6f);
+        bg->h = (int)(bg->h * 0.6f);
         add(bg);
         scroll = new Audio::Audio("scrollMenu", false);
         Engine::Sprite* mmAssets = new Engine::Sprite(getImage("FNF_main_menu_assets"));
@@ -46,7 +48,18 @@ namespace States
             switchMenu(-1);
         }
         if(keysJustPressed[SDLK_RETURN]){
-            switchState(new PlayState());
+            if (selected == 0){
+                switchState(new week1());
+            }
+            if (selected == 1) {
+                std::cout << "Not implemented yet.";
+            }
+            if (selected == 2) {
+                std::cout << "Not implemented yet.";
+            }
+            if (selected == 3) {
+                std::cout << "Not implemented yet.";
+            }
         }
     }
 

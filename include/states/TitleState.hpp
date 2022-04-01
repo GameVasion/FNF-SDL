@@ -18,7 +18,7 @@ namespace States
         bool f = false, u = false;
         Engine::Sprite* logo, *gf, *enter;
         Engine::Shape* white;
-        Audio::Audio* confirm;
+        Audio::Audio* confirm, *audio;
         bool skippedIntro = false;
         TitleState(){};
         ~TitleState(){};

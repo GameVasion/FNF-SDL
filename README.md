@@ -1,4 +1,5 @@
 # FNF SDL2
+### Please note this is just a fork for me to mess around in. This will most likely NOT include gameplay cuz of me being dumb.
 This is a rewrite of Friday Night Funkin' to C++ and just purely SDL2.
 ## Platforms
 as of now, this supports:
